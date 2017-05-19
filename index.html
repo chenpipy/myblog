@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>分享Web技术，记录生活点滴，用文字带你前行</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/.3.3.7@bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/.3.3.7@bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+
+        .yusi-logo{
+            display: block;
+            text-align: center;
+            padding: 1px 5px 5px 0;
+        }
+        .yusi-logo h1{
+            display: inline-block;
+            padding:20px 0px 20px 0 ;
+            cursor:pointer;
+            font-family: "华文行楷","Microsoft YaHei UI",arial,sans-serif;
+            font-weight: 100;
+            color: black;
+        }
+        .yusi-mono{
+            font-size: 54px;
+        }
+        .yusi-bloger{
+            font-size: 24px;
+        }
+        .yusi-mono:hover{
+            letter-spacing: 5px;
+        }
+        .yusi-bloger:hover{
+            left:26px;
+            opacity:0.2;
+        }
+        .navbar-blog{
+            position:relative;
+            right:20px;
+        }
+        .btn-login{
+            position: relative;
+            left:30px;
+            top:10px;
+        }
+        .blog-header{
+            position: relative;
+            bottom: 20px;
+            width:auto;
+            min-height: 50px;
+            padding: 15px 0 0 0;
+            background-color: #fffbfa;
+        }
+
+        .sub-info{
+            display: inline-block;
+            position: relative;
+            left: 4em;
+        }
+        .bdsharebuttonbox{
+            float: right;
+            margin-right: 35em;
+        }
+    </style>
+</head>
+<body style="background-color: #f7f7f7">
+<div class="container-fluid">
+    <div class="yusi-logo" style="background-color: #1abc9c">
+        <a href="#">
+            <h1>
+                <span class="yusi-mono">GIS鼻祖</span>
+                <span class="yusi-bloger">简单的静态博客乐园</span>
+            </h1>
+        </a>
+    </div>
+    </div>
+<div class="container-fluid">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">浩瀚星空</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">JAVA技术</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Web技术<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">JavaScript</a></li>
+
+                            <li><a href="#">CSS</a></li>
+
+                            <li><a href="#">HTML</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right navbar-blog">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-danger">提交</button>
+
+                </form>
+                <ul class="nav navbar-nav navbar-left">
+                    <button type="button" class="btn btn-primary btn-login" data-toggle="modal" data-target=".bs-example-modal-lg">登陆</button>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+
+<!--登陆模块-->
+<div id="blog_login">
+    <!-- Large modal -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">用户登陆</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">用户名：</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">密码：</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">记住
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消登陆</button>
+                    <button type="button" class="btn btn-primary">登陆</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--副头部-->
+<div class="row blog-header" >
+    <div class="sub-header">
+        <div class="sub-info">
+            <span >最新消息：</span>
+            <span>欢迎光临 <a href="">易大师</a> 的个人博客，该博客主要记录、分享博主的技术知识</span>
+        </div>
+        <div class="bdsharebuttonbox">
+            <a href="#" class="bds_more" data-cmd="more"></a><a title="分享到一键分享" href="#" class="bds_mshare" data-cmd="mshare"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a><a title="分享到QQ好友" href="#" class="bds_sqq" data-cmd="sqq"></a><a title="分享到有道云笔记" href="#" class="bds_youdao" data-cmd="youdao"></a><a title="分享到百度空间" href="#" class="bds_hi" data-cmd="hi"></a>
+        </div>
+        <script>
+            window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["mshare","qzone","tsina","tqq","renren","weixin","sqq","youdao","hi"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["mshare","qzone","tsina","tqq","renren","weixin","sqq","youdao","hi"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    </div>
+
+</div>
+<!--内容模块-->
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-9 col-lg-9 col-sm-8 column">
+            <div class="artical">
+                <!-- Post Title -->
+                <h3><a href="single.html">JQuery和Bootstrap简介</a></h3>
+                <!-- Post Data -->
+                <p style="margin-left: 20px;">
+                    <i class="icon-user"></i> dwqs <i class="icon-tags"></i> <a href="#">Jq</a>, <a href="#">bootstrap</a> <i class="icon-time"></i> 2014-08-07 18:23 <i class="icon-eye-open"></i> 20人阅读 <i class="icon-comment"></i> <a href="#">5评论</a>
+                </p>
+                <div>
+                    <!-- Post Image -->
+                    <a href="single.html">
+                        <img class="img-rounded" alt="缩略图" src="img/01.jpg" />
+                    </a>
+                    <!-- Post Content -->
+                    <span class="postcontent">
+						JQuery:Jquery是继prototype之后又一个优秀的Javascript框架。它是轻量级的js库 ，它兼容CSS3，还兼容各种浏览器（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+），jQuery2.0及后续版本将不再支持IE6/7/8浏览器。jQuery使用户能更方便地处理HTML（标准通用标记语言下的一个应用）、events、实现动画效果，并且方便地为网站提供AJAX交互。jQuery还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的插件可供选择。jQuery能够使用户的html页面保持代码和html内容分离，也就是说，不用再在html里面插入一堆js来调用命令了，只需定义id即可。
+
+						Bootstrap:
+						Bootstrap是Twitter推出的一个开源的用于前端开发的工具包。它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。
+					</span>
+                </div>
+                <!-- Read More Button -->
+                <p style="text-align:right;padding-top:10px">
+                    <a href="single.html" class="btn btn-large btn-primary">阅读更多</a>
+                </p>
+        </div>
+    </div>
+        <div class="col-md-3 col-lg-3 col-sm-4 column" >
+            <div>
+                <div class="span12 shadow">
+                    <h3 style="background-color:#AAA0A0;margin-top:0px;">博客公告</h3>
+                    <p>
+                        本静态博客以jq+bs+css3构成，仅供学习交流使用。若打开页面出现混乱的现象，请更新您的浏览器版本，或者使用IE9+、Google等主流浏览器，他们均支持H5+C3.欢迎交流。能力有限，在响应式方面存在的bug敬请谅解，谢谢！
+                    </p>
+                </div>
+                <div class="span12 shadow" style="margin-top:10px;margin-left:0;">
+                    <h3 style="background-color:#AAA0A0;margin-top:0px;">邮件订阅</h3>
+                    <p>订阅精彩内容</p>
+                    <div class="input-append" >
+                        <input class="span10" style="margin-left:1.8em" id="appendedInputButtons" type="text" placeholder="邮箱">
+                        <button class="btn btn-primary" type="button">订阅</button>
+                    </div>
+                </div>
+                <div class="span12 shadow" style="margin-top:10px;margin-left:0;">
+                    <h3 style="background-color:#AAA0A0;margin-top:0px;">近期文章</h3>
+                    <!-- <ul>
+                        <li><a href="single.html">JQuery和Bootstrap简介1</a></li>
+                        <li><a href="single.html">JQuery和Bootstrap简介2</a></li>
+                        <li><a href="single.html">JQuery和Bootstrap简介3</a></li>
+                        <li><a href="single.html">JQuery和Bootstrap简介4</a></li>
+                        <li><a href="single.html">JQuery和Bootstrap简介5</a></li>
+                        <li><a href="single.html">JQuery和Bootstrap简介6</a></li>
+                        <li><a href="single.html">JQuery和Bootstrap简介7</a></li>
+                        <li><a href="single.html">JQuery和Bootstrap简介8</a></li>
+                        <li><a href="single.html">JQuery和Bootstrap简介9</a></li>
+                        <li><a href="single.html">JQuery和Bootstrap简介10</a></li>
+                    </ul> -->
+                    <ul style="margin-left:-40px">
+                        <p><a href="single.html">JQuery和Bootstrap简介1</a></p>
+                        <p><a href="single.html">JQuery和Bootstrap简介2</a></p>
+                        <p><a href="single.html">JQuery和Bootstrap简介3</a></p>
+                        <p><a href="single.html">JQuery和Bootstrap简介4</a></p>
+                        <p><a href="single.html">JQuery和Bootstrap简介5</a></p>
+                        <p><a href="single.html">JQuery和Bootstrap简介6</a></p>
+                    </ul>
+                </div>
+                <div class="span12 shadow" style="margin-top:10px;margin-left:0;">
+                    <h3 style="background-color:#AAA0A0;margin-top:0px;">标签云</h3>
+                    <div class="biaoqian">
+                        <a href="single.html" class="btn btn-info">Jq,Bootstrap</a>
+                        <a href="single.html" class="btn btn-primary">Jq,Bootstrap</a>
+                        <a href="single.html" class="btn tn-success">Jq,Bootstrap</a>
+                        <a href="single.html" class="btn btn-warning">Jq,Bootstrap</a>
+                        <a href="single.html" class="btn btn-danger">Jq,Bootstrap</a>
+                        <a href="single.html" class="btn btn-inverse">Jq,Bootstrap</a>
+                        <a href="single.html" class="btn btn-primary">Jq,Bootstrap</a>
+                        <a href="single.html" class="btn tn-success">Jq,Bootstrap</a>
+                        <a href="single.html" class="btn btn-warning">Jq,Bootstrap</a>
+                        <a href="single.html" class="btn btn-primary">Jq,Bootstrap</a>
+                    </div>
+                    </ul>
+                </div>
+                <div class="span12 shadow" style="margin-top:10px;margin-left:0;">
+                    <h3 style="background-color:#AAA0A0;margin-top:0px;">博客日历</h3>
+                    <div id="datepicker" style="margin:15px;" class="shadow"></div>
+                    <script type="text/javascript">
+                        $( "#datepicker" ).datepicker(
+                            {
+                                showMonthAfterYear:true,
+                                yearSuffix:"年",
+                                prevText:"上一月",
+                                nextText:"下一月",
+                                monthNames:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月",],
+                                dayNamesMin:["日","一","二","三","四","五","六",],
+                                dateFormat:"yy-mm-dd",
+                            });
+                    </script>
+                </div>
+            </div>
+        </div>
+</div>
+<div>
+
+</div>
+</body>
+</html>
